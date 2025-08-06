@@ -22,8 +22,8 @@ export default function RootLayout() {
                 </View>
 
               <View style={styles.headerTabs}>
-                <AntDesign name="hearto" size={26} color="black" />
-                <Feather name="message-circle" size={28} color="black" />
+                <AntDesign name="hearto" size={24} color="black" />
+                <Feather name="message-circle" size={26} color="black" />
               </View>
             </View>
           )
