@@ -1,6 +1,7 @@
 import React from 'react'
-import { Alert, ScrollView, StyleSheet, Text, View } from 'react-native'
+import { Alert, ScrollView, StyleSheet, View } from 'react-native'
 
+import FeedPost from '../../components/FeedPost'
 import StoryCircle from '../../components/StoryCircle'
 
 const handleStoryPress = (username: string) => {
@@ -17,6 +18,10 @@ const Home: React.FC = () => {
         { id: '6', username: 'chris_w', image: { uri: 'https://picsum.photos/200/300' }, isViewed: false },
         { id: '7', username: 'sara_j', image: { uri: 'https://picsum.photos/200/300' }, isViewed: false },
         { id: '8', username: 'mike_t', image: { uri: 'https://picsum.photos/200/300' }, isViewed: true },
+    ]
+
+    const posts = [
+        {id: '1', profilePicture: {uri: 'https://picsum.photos/200/300'}, username: 'johndoe', contentSource: {uri: 'https://picsum.photos/200/300'}, likedUsers: ['chris_w', 'sara_j'], date: 'August 6'}
     ]
 
     return (
@@ -38,9 +43,22 @@ const Home: React.FC = () => {
                     ))
                 }
             </ScrollView>
-            <Text>
-                Home page
-            </Text>
+            <ScrollView
+                showsVerticalScrollIndicator={false}
+            >
+                {
+                    posts.map(post => (
+                        <FeedPost
+                            key={post.id}
+                            profilePicture={post.profilePicture}
+                            username={post.username}
+                            contentSource={post.contentSource}
+                            likedUsers={post.likedUsers}
+                            date={post.date}
+                        />
+                    ))
+                }
+            </ScrollView>
         </View>
     )
 }
