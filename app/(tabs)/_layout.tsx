@@ -6,12 +6,12 @@ export default function TabLayout() {
         <Tabs
             screenOptions={{
                 headerShown: false,
-                tabBarActiveTintColor: "#1794e1ff", // Tailwind's emerald-600
-                tabBarInactiveTintColor: "#6b7280", // Tailwind's gray-500
+                tabBarActiveTintColor: "#1794e1ff",
+                tabBarInactiveTintColor: "#6b7280",
                 tabBarStyle: {
-                    backgroundColor: "#ffffff", // Tailwind's gray-100
+                    backgroundColor: "#ffffff",
                     borderTopWidth: 1,
-                    borderTopColor: "#e0e0e0", // Tailwind's gray-200
+                    borderTopColor: "#e0e0e0",
                 },
             }}
         >

@@ -23,7 +23,7 @@ export default function RootLayout() {
 
               <View style={styles.headerTabs}>
                 <AntDesign name="hearto" size={26} color="black" />
-                <Feather name="message-circle" size={26} color="black" />
+                <Feather name="message-circle" size={28} color="black" />
               </View>
             </View>
           )
@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
     width: 70,
     marginRight: 5,
     flexDirection: 'row',
+    alignItems: 'center',
     justifyContent: 'space-between',
   },
 })
